@@ -89,6 +89,12 @@
             android:title="@string/pi_spoof_title"
             android:summary="@string/pi_spoof_summary"
             android:defaultValue="true" />
+            
+        <com.flare.zone.preferences.SystemPropertySwitchPreference
+            android:key="pif_json_file_preference"
+            android:title="@string/pif_spoofing_title"
+            android:summary="@string/pif_spoofing_summary"/>
+
 
     </PreferenceCategory>
 
