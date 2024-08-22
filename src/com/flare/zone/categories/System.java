@@ -21,8 +21,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Handler;
+import android.os.SystemProperties;
 import android.util.Log;
 import android.app.Activity;
+import android.app.AlertDialog; 
 
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -86,9 +88,13 @@ public class System extends SettingsPreferenceFragment implements
             intent.setType("application/json");
             startActivityForResult(intent, 10001);
             return true;
+        } else if ("show_pif_properties".equals(preference.getKey())) {
+            showPropertiesDialog();
+            return true;
         }
         return super.onPreferenceTreeClick(preference);
     }
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -117,7 +123,39 @@ public class System extends SettingsPreferenceFragment implements
             }
         }
     }
-
+    private void showPropertiesDialog() {
+        StringBuilder properties = new StringBuilder();
+        try {
+            JSONObject jsonObject = new JSONObject();
+            String[] keys = {
+                "persist.sys.pihooks_ID",
+                "persist.sys.pihooks_BRAND",
+                "persist.sys.pihooks_DEVICE",
+                "persist.sys.pihooks_FINGERPRINT",
+                "persist.sys.pihooks_MANUFACTURER",
+                "persist.sys.pihooks_MODEL",
+                "persist.sys.pihooks_PRODUCT",
+                "persist.sys.pihooks_SECURITY_PATCH",
+                "persist.sys.pihooks_DEVICE_INITIAL_SDK_INT"
+            };
+            for (String key : keys) {
+                String value = SystemProperties.get(key, null);
+                if (value != null) {
+                    String buildKey = key.replace("persist.sys.pihooks_", "");
+                    jsonObject.put(buildKey, value);
+                }
+            }
+            properties.append(jsonObject.toString(4));
+        } catch (Exception e) {
+            Log.e(TAG, "Error reading JSON or setting properties", e);
+            properties.append(getString(R.string.error_loading_properties));
+        }
+        new AlertDialog.Builder(getContext())
+            .setTitle(R.string.show_pif_properties_title)
+            .setMessage(properties.toString())
+            .setPositiveButton(android.R.string.ok, null)
+            .show();
+    }
     public boolean onPreferenceChange(Preference preference, Object objValue) {
         final String key = preference.getKey();
         return true;

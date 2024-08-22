@@ -95,6 +95,11 @@
             android:title="@string/pif_spoofing_title"
             android:summary="@string/pif_spoofing_summary"/>
 
+        <com.flare.zone.preferences.SystemPropertySwitchPreference
+            android:key="show_pif_properties"
+            android:title="@string/show_pif_properties_title"
+            android:summary="@string/show_pif_properties_summary"
+            android:dependency="persist.sys.pihooks.all"/>
 
     </PreferenceCategory>
 
