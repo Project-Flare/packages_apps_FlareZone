@@ -52,6 +52,7 @@
     <string name="ls_category">Lockscreen settings</string>
     <string name="icons_category">Icons settings</string>
     <string name="privacy_category">Privacy indicators</string>
+    <string name="volume_category">VOlume button</string>
 
     <!-- App info dialog -->
     <string name="flarezone_dialog_title">Help us help you!</string>
@@ -246,4 +247,8 @@
     <string name="location_privacy_indicator_summary">Show indicator when any app uses location</string>
     <string name="projection_privacy_indicator_title">Media projection privacy indicator</string>
     <string name="projection_privacy_indicator_summary">Show indicator when device screen is projected</string>
+
+    <!-- Volume button music control -->
+    <string name="volume_button_music_control_title">Playback control</string>
+    <string name="volume_button_music_control_summary">When the screen is off, long-pressing volume keys will skip music tracks</string>
 </resources>
