@@ -43,6 +43,12 @@
             android:title="@string/less_boring_heads_up_title"
             android:summary="@string/less_boring_heads_up_summary"
             android:defaultValue="false" />
+
+        <!-- QS Tiles haptic -->
+        <com.flare.zone.preferences.SystemSettingSwitchPreference
+            android:key="qs_tiles_haptic_feedback"
+            android:title="@string/qs_tiles_haptic_feedback_title"
+            android:defaultValue="true" />
     
     </PreferenceCategory>
 
