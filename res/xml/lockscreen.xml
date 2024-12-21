@@ -5,6 +5,18 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <PreferenceCategory
+        android:key="lockscreen_ui_finterprint_category"
+        android:title="@string/fingerprint_category">
+
+        <com.flare.zone.preferences.SystemSettingSwitchPreference
+            android:key="enable_ripple_effect"
+            android:title="@string/enable_fingerprint_ripple_effect_title"
+            android:summary="@string/enable_fingerprint_ripple_effect_summary"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:title="@string/ls_category">
 
 	    <com.flare.zone.preferences.SystemSettingListPreference
