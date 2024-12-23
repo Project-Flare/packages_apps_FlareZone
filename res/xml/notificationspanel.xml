@@ -30,6 +30,17 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:title="@string/qs_category">
+
+        <com.flare.zone.preferences.SystemSettingSwitchPreference
+            android:key="qs_footer_data_usage"
+            android:title="@string/qs_footer_datausage_title"
+            android:summary="@string/qs_footer_datausage_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:title="@string/general_category">
 
 	    <com.flare.zone.preferences.SystemSettingSwitchPreference

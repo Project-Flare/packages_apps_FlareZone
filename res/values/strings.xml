@@ -54,6 +54,7 @@
     <string name="privacy_category">Privacy indicators</string>
     <string name="volume_category">VOlume button</string>
     <string name="fingerprint_category">Fingerprint</string>
+    <string name="qs_category">Quick Settings</string>
 
     <!-- Units -->
     <string name="unit_milliseconds">milliseconds</string>
@@ -322,4 +323,8 @@
     <string name="fp_success_vibrate_summary">Vibrate when fingerprint authentication is successful</string>
     <string name="fp_error_vibrate_title">Fingerprint error vibration</string>
     <string name="fp_error_vibrate_summary">Vibrate when fingerprint authentication fails</string>
+
+    <!-- Data usage info in QS footer -->
+    <string name="qs_footer_datausage_title">Data usage</string>
+    <string name="qs_footer_datausage_summary">Display data usage summary in quick settings footer</string>
 </resources>
