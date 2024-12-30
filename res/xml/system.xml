@@ -83,6 +83,13 @@
             android:summary="@string/ignore_window_secure_summary"
             android:defaultValue="false"/>
 
+        <!-- Google Play Integrity -->
+        <com.flare.zone.preferences.SystemPropertySwitchPreference
+            android:key="persist.sys.pihooks.pi"
+            android:title="@string/pi_spoof_title"
+            android:summary="@string/pi_spoof_summary"
+            android:defaultValue="true" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
