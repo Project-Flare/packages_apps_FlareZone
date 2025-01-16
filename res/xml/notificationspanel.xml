@@ -39,6 +39,12 @@
             android:summary="@string/island_notification_summary"
             android:fragment="com.flare.zone.fragments.IslandSettings" />
 
+        <Preference
+            android:key="qs_tile_layout"
+            android:title="@string/qs_tile_layout_title"
+            android:summary="@string/qs_tile_layout_summary"
+            android:fragment="com.flare.zone.fragments.QsTileLayoutSettings" />
+
 	<com.flare.zone.preferences.SystemSettingSwitchPreference
             android:key="qs_show_data_usage"
             android:title="@string/qs_footer_datausage_title"
