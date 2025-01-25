@@ -27,6 +27,11 @@
             android:summary="@string/status_bar_logo_summary"
             android:fragment="com.flare.zone.fragments.StatusBarLogo" />
 
+        <Preference
+            android:key="battery_bar_category"
+            android:fragment="com.flare.zone.fragments.BatterySettings"
+            android:title="@string/battery_settings_title" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
