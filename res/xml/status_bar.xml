@@ -12,4 +12,11 @@
         <intent android:action="com.android.settings.action.STATUS_BAR_TUNER" /> 
     </Preference>
 
+    <Preference
+        android:key="network_traffic_state"
+        android:title="@string/network_traffic_state_title"
+        android:summary="@string/network_traffic_state_summary"
+        android:fragment="com.flare.zone.fragments.NetworkTrafficSettings"
+        android:defaultValue="false" />
+
 </PreferenceScreen>
