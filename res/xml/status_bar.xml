@@ -19,4 +19,15 @@
         android:fragment="com.flare.zone.fragments.NetworkTrafficSettings"
         android:defaultValue="false" />
 
+    <PreferenceCategory
+        android:title="@string/statusbar_category">
+
+	<com.flare.zone.preferences.SystemSettingSwitchPreference
+            android:key="data_disabled_icon"
+            android:title="@string/data_disabled_icon_title"
+            android:summary="@string/data_disabled_icon_summary"
+            android:defaultValue="true"/>
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
