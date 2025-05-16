@@ -42,20 +42,26 @@
     <PreferenceCategory
         android:title="@string/general_category">
 
-    <!-- Double tap to sleep -->
-    <com.flare.zone.preferences.SystemSettingSwitchPreference
-        android:key="double_tap_sleep_gesture"
-        android:title="@string/status_bar_double_tap_to_sleep_title"
-        android:summary="@string/status_bar_double_tap_to_sleep_summary"
-        android:defaultValue="false" />
+	<!-- Double tap to sleep -->
+	<com.flare.zone.preferences.SystemSettingSwitchPreference
+            android:key="double_tap_sleep_gesture"
+            android:title="@string/status_bar_double_tap_to_sleep_title"
+            android:summary="@string/status_bar_double_tap_to_sleep_summary"
+            android:defaultValue="false" />
 
+	<com.flare.zone.preferences.SystemSettingSwitchPreference
+            android:key="advanced_reboot"
+            android:title="@string/global_actions_advanced_reboot_title"
+            android:summary="@string/global_actions_advanced_reboot_summary"
+            android:defaultValue="false" />
 
-    <com.flare.zone.preferences.SystemSettingSwitchPreference
-        android:key="advanced_reboot"
-        android:title="@string/global_actions_advanced_reboot_title"
-        android:summary="@string/global_actions_advanced_reboot_summary"
-        android:defaultValue="false" />
-
+	<com.flare.zone.preferences.SecureSettingListPreference
+            android:key="navbar_layout_mode"
+            android:title="@string/navbar_layout_title"
+            android:summary="%s"
+            android:entries="@array/navbar_layout_entries"
+            android:entryValues="@array/navbar_layout_values"
+            android:defaultValue="0" />
     </PreferenceCategory>
 
     <PreferenceCategory
