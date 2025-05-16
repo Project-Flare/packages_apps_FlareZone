@@ -52,6 +52,7 @@
     <string name="icons_category">Icons settings</string>
     <string name="privacy_category">Privacy indicators</string>
     <string name="volume_category">Volume settings</string>
+    <string name="fp_category">Fingerprint settings</string>
 
     <!-- App info dialog -->
     <string name="flarezone_dialog_title">Help us help you!</string>
@@ -196,4 +197,10 @@
     <!-- Disable QS -->
     <string name="disable_qs_title">Hide QS in secure lockscreen</string>
     <string name="disable_qs_summary">Hides QS if device is locked. Does not disable notification shade</string>
+
+    <!-- Miscellaneous - Lock Screen -->
+    <string name="fp_success_vibrate_title">Fingerprint authentication vibration</string>
+    <string name="fp_success_vibrate_summary">Vibrate when fingerprint authentication is successful</string>
+    <string name="fp_error_vibrate_title">Fingerprint error vibration</string>
+    <string name="fp_error_vibrate_summary">Vibrate when fingerprint authentication fails</string>
 </resources>
