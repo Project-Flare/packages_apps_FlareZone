@@ -16,15 +16,20 @@
 
     </PreferenceCategory>
 
-    <Preference
-        android:key="network_traffic_state"
-        android:title="@string/network_traffic_state_title"
-        android:summary="@string/network_traffic_state_summary"
-        android:fragment="com.flare.zone.fragments.NetworkTrafficSettings"
-        android:defaultValue="false" />
+    <PreferenceCategory
+        android:title="@string/network_category">
+
+	<Preference
+            android:key="network_traffic_state"
+            android:title="@string/network_traffic_state_title"
+            android:summary="@string/network_traffic_state_summary"
+            android:fragment="com.flare.zone.fragments.NetworkTrafficSettings"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="@string/status_bar_category">
+        android:title="@string/general_category">
 
         <Preference
             android:key="battery_bar_category"
