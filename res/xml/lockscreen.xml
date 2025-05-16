@@ -60,4 +60,13 @@
             android:defaultValue="false" />
     </PreferenceCategory>            
 
+    <PreferenceCategory
+        android:title="@string/music_category">
+
+	<Preference
+            android:key="pulse_settings"
+            android:title="@string/pulse_settings"
+            android:fragment="com.flare.zone.fragments.PulseSettings" />
+    </PreferenceCategory>
+
 </PreferenceScreen>
