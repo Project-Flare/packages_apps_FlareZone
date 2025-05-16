@@ -37,6 +37,13 @@
             android:defaultValue="false"
             android:disableDependentsState="true" />
 
+	<!-- Volume panel to left -->
+        <com.flare.zone.preferences.SecureSettingSwitchPreference
+            android:key="volume_panel_on_left"
+            android:title="@string/volume_panel_on_left_title"
+            android:summary="@string/volume_panel_on_left_summary"
+            android:defaultValue="false" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
