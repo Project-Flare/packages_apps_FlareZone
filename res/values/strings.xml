@@ -51,6 +51,7 @@
     <string name="ls_category">Lockscreen settings</string>
     <string name="icons_category">Icons settings</string>
     <string name="privacy_category">Privacy settings</string>
+    <string name="volume_category">Volume settings</string>
 
     <!-- App info dialog -->
     <string name="flarezone_dialog_title">Help us help you!</string>
@@ -136,4 +137,8 @@
     <!-- Wakeup options -->
     <string name="wakeup_when_plugged_unplugged_title">Wake up on charge</string>
     <string name="wakeup_when_plugged_unplugged_summary">Wake up device if charger is plugged/unplugged.</string>
+
+    <!-- Volume rocker wake -->
+    <string name="volume_rocker_wake_title">Volume wake</string>
+    <string name="volume_rocker_wake_summary">Wake your device up by pressing the volume keys</string>
 </resources>
