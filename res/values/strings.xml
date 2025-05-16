@@ -241,4 +241,8 @@
     <string name="clock_date_position">Date position</string>
     <string name="clock_date_right">Right of time</string>
     <string name="clock_date_left">Left of time</string>
+
+    <!-- QSTile requires unlocking before being accessible -->
+    <string name="qstile_requires_unlocking_title">Secure QS tiles require unlocking</string>
+    <string name="qstile_requires_unlocking_summary">The following QS tiles require unlocking before you can access them from the lock screen:\nAirplane, Cellular, NFC, Hotspot, USB tethering and Location</string>
 </resources>

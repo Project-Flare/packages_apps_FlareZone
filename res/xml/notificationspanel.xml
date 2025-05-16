@@ -30,4 +30,14 @@
             android:defaultValue="true" />
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:title="@string/general_category">
+
+	<com.flare.zone.preferences.SecureSettingSwitchPreference
+            android:key="qstile_requires_unlocking"
+            android:title="@string/qstile_requires_unlocking_title"
+            android:summary="@string/qstile_requires_unlocking_summary"
+            android:defaultValue="true" />
+    </PreferenceCategory>
+
 </PreferenceScreen>
