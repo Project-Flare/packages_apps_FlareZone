@@ -25,6 +25,12 @@
         android:title="@string/fp_category">
 
 	<com.flare.zone.preferences.SystemSettingSwitchPreference
+            android:key="enable_ripple_effect"
+            android:title="@string/enable_fingerprint_ripple_effect_title"
+            android:summary="@string/enable_fingerprint_ripple_effect_summary"
+            android:defaultValue="true" />
+
+	<com.flare.zone.preferences.SystemSettingSwitchPreference
             android:key="fp_success_vibrate"
             android:title="@string/fp_success_vibrate_title"
             android:summary="@string/fp_success_vibrate_summary"
@@ -45,12 +51,6 @@
             android:key="wake_when_plugged_or_unplugged"
             android:title="@string/wakeup_when_plugged_unplugged_title"
             android:summary="@string/wakeup_when_plugged_unplugged_summary"
-            android:defaultValue="true" />
-
-	<com.flare.zone.preferences.SystemSettingSwitchPreference
-            android:key="enable_ripple_effect"
-            android:title="@string/enable_fingerprint_ripple_effect_title"
-            android:summary="@string/enable_fingerprint_ripple_effect_summary"
             android:defaultValue="true" />
 
 	<com.flare.zone.preferences.SystemSettingSwitchPreference
