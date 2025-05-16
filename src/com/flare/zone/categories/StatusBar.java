@@ -19,6 +19,7 @@ package com.flare.zone.categories;
 import android.content.Context;
 import android.content.ContentResolver;
 import android.os.Bundle;
+import android.view.View;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.Preference.OnPreferenceChangeListener;
@@ -27,10 +28,18 @@ import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
+import com.flare.zone.preferences.SystemSettingSeekBarPreference;
+import com.flare.zone.preferences.SystemSettingListPreference;
+import com.flare.zone.fragments.DeviceUtils;
+
 public class StatusBar extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String TAG = "StatusBar";
+
+    private static final String STATUS_BAR_CLOCK_STYLE = "status_bar_clock";
+
+    private SystemSettingListPreference mStatusBarClock;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -38,8 +47,24 @@ public class StatusBar extends SettingsPreferenceFragment implements
 
         addPreferencesFromResource(R.xml.status_bar);
 
-        ContentResolver resolver = getActivity().getContentResolver();
+        final Context mContext = getActivity().getApplicationContext();
 
+        mStatusBarClock = findPreference(STATUS_BAR_CLOCK_STYLE);
+        if (mStatusBarClock != null) {
+            // Adjust status bar preferences for RTL
+            if (getResources().getConfiguration().getLayoutDirection() == View.LAYOUT_DIRECTION_RTL) {
+                if (DeviceUtils.hasCenteredCutout(mContext)) {
+                    mStatusBarClock.setEntries(R.array.status_bar_clock_position_entries_notch_rtl);
+                    mStatusBarClock.setEntryValues(R.array.status_bar_clock_position_values_notch_rtl);
+                } else {
+                    mStatusBarClock.setEntries(R.array.status_bar_clock_position_entries_rtl);
+                    mStatusBarClock.setEntryValues(R.array.status_bar_clock_position_values_rtl);
+                }
+            } else if (DeviceUtils.hasCenteredCutout(mContext)) {
+                mStatusBarClock.setEntries(R.array.status_bar_clock_position_entries_notch);
+                mStatusBarClock.setEntryValues(R.array.status_bar_clock_position_values_notch);
+            }
+        }
     }
 
     @Override
@@ -57,10 +82,9 @@ public class StatusBar extends SettingsPreferenceFragment implements
         super.onPause();
     }
 
-    public boolean onPreferenceChange(Preference preference, Object objValue) {
-        final String key = preference.getKey();
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        // Handle preference changes here if needed
         return true;
     }
-
 }
-
