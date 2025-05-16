@@ -294,4 +294,10 @@
     <string name="visualizer_center_mirrored_summary">Set the visualizer in center mirrored mode</string>
     <string name="pulse_vertical_mirror_title">Vertical Mirror</string>
     <string name="pulse_vertical_mirror_summary">Create other pulse and flip vertically</string>
+
+    <!-- Screen off animation -->
+    <string name="default_string">Default</string>
+    <string name="screen_off_animation_title">Screen off animation</string>
+    <string name="screen_off_animation_crt" translatable="false">CRT</string>
+    <string name="screen_off_animation_scale">Scale</string>
 </resources>
