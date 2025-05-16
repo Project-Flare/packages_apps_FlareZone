@@ -4,11 +4,22 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <com.flare.zone.preferences.SystemSettingSwitchPreference
-        android:key="lockscreen_enable_power_menu"
-        android:title="@string/lockscreen_enable_power_menu_title"
-        android:summary="@string/lockscreen_enable_power_menu_summary"
-        android:defaultValue="true" />
+    <PreferenceCategory
+        android:title="@string/ls_category">
+
+        <com.flare.zone.preferences.SystemSettingSwitchPreference
+            android:key="lockscreen_battery_info"
+            android:title="@string/lockscreen_battery_info_title"
+            android:summary="@string/lockscreen_battery_info_summary"
+            android:defaultValue="true" />
+
+        <com.flare.zone.preferences.SystemSettingSwitchPreference
+            android:key="lockscreen_enable_power_menu"
+            android:title="@string/lockscreen_enable_power_menu_title"
+            android:summary="@string/lockscreen_enable_power_menu_summary"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
 
         <com.flare.zone.preferences.GlobalSettingSwitchPreference
             android:key="wake_when_plugged_or_unplugged"
