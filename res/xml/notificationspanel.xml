@@ -39,6 +39,12 @@
             android:summary="@string/island_notification_summary"
             android:fragment="com.flare.zone.fragments.IslandSettings" />
 
+	<com.flare.zone.preferences.SystemSettingSwitchPreference
+            android:key="qs_show_data_usage"
+            android:title="@string/qs_footer_datausage_title"
+            android:summary="@string/qs_footer_datausage_summary"
+            android:defaultValue="false" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
